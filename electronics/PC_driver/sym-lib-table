@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name PC_driver-rescue)(type Legacy)(uri ${KIPRJMOD}/PC_driver-rescue.lib)(options "")(descr ""))
+  (lib (name ca3240)(type Legacy)(uri ${KIPRJMOD}/ca3240/ca3240.lib)(options "")(descr ""))
 )
