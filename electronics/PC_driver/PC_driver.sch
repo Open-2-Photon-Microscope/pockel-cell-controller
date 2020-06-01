@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L PC_driver-rescue:Conn_Coaxial J1
 U 1 1 5E145765
-P 3750 1250
-F 0 "J1" H 3760 1370 50  0000 C CNN
-F 1 "Conn_Coaxial" V 3865 1250 50  0000 C CNN
-F 2 "Connectors:BNC" H 3750 1250 50  0001 C CNN
-F 3 "" H 3750 1250 50  0001 C CNN
-	1    3750 1250
+P 2200 950
+F 0 "J1" H 2210 1070 50  0000 C CNN
+F 1 "Analog_Input (0-5V)" V 2315 950 50  0000 C CNN
+F 2 "Connectors:BNC" H 2200 950 50  0001 C CNN
+F 3 "" H 2200 950 50  0001 C CNN
+	1    2200 950 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -47,17 +47,6 @@ F 3 "" H 5650 7950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PC_driver-rescue:R R1
-U 1 1 5E14669F
-P 3850 1750
-F 0 "R1" V 3930 1750 50  0000 C CNN
-F 1 "100k" V 3850 1750 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3780 1750 50  0001 C CNN
-F 3 "" H 3850 1750 50  0001 C CNN
-	1    3850 1750
-	0    -1   -1   0   
-$EndComp
-$Comp
 L PC_driver-rescue:R R2
 U 1 1 5E146882
 P 4200 4100
@@ -71,13 +60,13 @@ $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5E147AB2
-P 4300 1550
-F 0 "#PWR03" H 4300 1300 50  0001 C CNN
-F 1 "GND" H 4300 1400 50  0000 C CNN
-F 2 "" H 4300 1550 50  0001 C CNN
-F 3 "" H 4300 1550 50  0001 C CNN
-	1    4300 1550
-	-1   0    0    1   
+P 1300 950
+F 0 "#PWR03" H 1300 700 50  0001 C CNN
+F 1 "GND" H 1300 800 50  0000 C CNN
+F 2 "" H 1300 950 50  0001 C CNN
+F 3 "" H 1300 950 50  0001 C CNN
+	1    1300 950 
+	0    1    1    0   
 $EndComp
 $Comp
 L PC_driver-rescue:POT RV1
@@ -127,21 +116,7 @@ F 3 "" H 4250 4950 50  0001 C CNN
 	1    4250 4950
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR07
-U 1 1 5E14C60F
-P 10200 2050
-F 0 "#PWR07" H 10200 1800 50  0001 C CNN
-F 1 "GND" H 10200 1900 50  0000 C CNN
-F 2 "" H 10200 2050 50  0001 C CNN
-F 3 "" H 10200 2050 50  0001 C CNN
-	1    10200 2050
-	0    1    1    0   
-$EndComp
-Text GLabel 11050 1200 2    60   Input ~ 0
-S2
 NoConn ~ 6050 4950
-NoConn ~ 3750 1450
 $Comp
 L power:GND #PWR012
 U 1 1 5E1895A3
@@ -180,16 +155,9 @@ Wire Wire Line
 Wire Wire Line
 	3800 3350 3550 3350
 Wire Wire Line
-	3550 3350 3550 1750
+	1750 950  1850 950 
 Wire Wire Line
-	3550 1250 3600 1250
-Wire Wire Line
-	4000 1750 4300 1750
-Wire Wire Line
-	4300 1750 4300 1550
-Wire Wire Line
-	3700 1750 3550 1750
-Connection ~ 3550 1750
+	1450 950  1300 950 
 Wire Wire Line
 	4750 4350 4900 4350
 Wire Wire Line
@@ -207,10 +175,6 @@ Wire Wire Line
 Connection ~ 4900 4350
 Wire Wire Line
 	6050 4750 6750 4750
-Wire Wire Line
-	7050 4750 7050 3250
-Wire Wire Line
-	7050 3250 4000 3250
 Wire Wire Line
 	6050 4550 6750 4550
 Wire Wire Line
@@ -258,8 +222,6 @@ Wire Wire Line
 Wire Wire Line
 	9200 1350 9200 1200
 Wire Wire Line
-	3550 1750 3550 1250
-Wire Wire Line
 	4900 4350 5050 4350
 Wire Wire Line
 	6750 4550 6850 4550
@@ -276,203 +238,70 @@ Wire Wire Line
 Wire Wire Line
 	9000 1350 9100 1350
 $Comp
-L Analog_Switch:ADG419BN U?
-U 1 1 5E62884A
-P 10600 1000
-F 0 "U?" H 10600 1242 50  0000 C CNN
-F 1 "ADG419BN" H 10600 1151 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 10600 700 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG419.pdf" H 10600 800 50  0001 C CNN
-	1    10600 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Analog_Switch:ADG419BN U?
-U 2 1 5E6298EB
-P 8950 4150
-F 0 "U?" V 8633 4150 50  0000 C CNN
-F 1 "ADG419BN" V 8724 4150 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 8950 3850 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG419.pdf" H 8950 3950 50  0001 C CNN
-	2    8950 4150
-	0    1    1    0   
-$EndComp
-Text GLabel 10050 1100 0    60   Input ~ 0
-D
-Wire Wire Line
-	10050 1100 10300 1100
-$Comp
-L PC_driver-rescue:Conn_Coaxial J3
-U 1 1 5E6303ED
-P 10250 1500
-F 0 "J3" H 10260 1620 50  0000 C CNN
-F 1 "Conn_Coaxial" V 10365 1500 50  0000 C CNN
-F 2 "Connectors:BNC" H 10250 1500 50  0001 C CNN
-F 3 "" H 10250 1500 50  0001 C CNN
-	1    10250 1500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	10400 1500 10600 1500
-Wire Wire Line
-	10600 1500 10600 1400
-$Comp
-L PC_driver-rescue:R R?
-U 1 1 5E6393D9
-P 10600 1700
-F 0 "R?" V 10680 1700 50  0000 C CNN
-F 1 "100k" V 10600 1700 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10530 1700 50  0001 C CNN
-F 3 "" H 10600 1700 50  0001 C CNN
-	1    10600 1700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	10600 1500 10600 1550
-Connection ~ 10600 1500
-Wire Wire Line
-	10600 1850 10600 2050
-Wire Wire Line
-	10600 2050 10400 2050
-Wire Wire Line
-	10900 1200 11050 1200
-$Comp
-L power:GND #PWR?
-U 1 1 5E64623D
-P 8300 4150
-F 0 "#PWR?" H 8300 3900 50  0001 C CNN
-F 1 "GND" H 8300 4000 50  0000 C CNN
-F 2 "" H 8300 4150 50  0001 C CNN
-F 3 "" H 8300 4150 50  0001 C CNN
-	1    8300 4150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8300 4150 8350 4150
-$Comp
-L power:GND #PWR?
-U 1 1 5E6486A2
-P 11000 1000
-F 0 "#PWR?" H 11000 750 50  0001 C CNN
-F 1 "GND" H 11000 850 50  0000 C CNN
-F 2 "" H 11000 1000 50  0001 C CNN
-F 3 "" H 11000 1000 50  0001 C CNN
-	1    11000 1000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	11000 1000 10900 1000
-Wire Wire Line
-	8450 4250 8350 4250
-Wire Wire Line
-	8350 4250 8350 4150
-Connection ~ 8350 4150
-Wire Wire Line
-	8350 4150 8450 4150
-$Comp
 L PC_driver-rescue:LED D?
 U 1 1 5E64E465
-P 9800 4150
-F 0 "D?" H 9800 4250 50  0000 C CNN
-F 1 "LED" H 9800 4050 50  0000 C CNN
-F 2 "LEDs:LED_PLCC-2" H 9800 4150 50  0001 C CNN
-F 3 "" H 9800 4150 50  0001 C CNN
-	1    9800 4150
+P 4100 6050
+F 0 "D?" H 4100 6150 50  0000 C CNN
+F 1 "LED" H 4100 5950 50  0000 C CNN
+F 2 "LEDs:LED_PLCC-2" H 4100 6050 50  0001 C CNN
+F 3 "" H 4100 6050 50  0001 C CNN
+	1    4100 6050
 	-1   0    0    1   
 $EndComp
 $Comp
 L PC_driver-rescue:R R5
 U 1 1 5E64ED6F
-P 10300 4150
-F 0 "R5" V 10380 4150 50  0000 C CNN
-F 1 "3k6" V 10300 4150 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10230 4150 50  0001 C CNN
-F 3 "" H 10300 4150 50  0001 C CNN
-	1    10300 4150
+P 4600 6050
+F 0 "R5" V 4680 6050 50  0000 C CNN
+F 1 "3k6" V 4600 6050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 6050 50  0001 C CNN
+F 3 "" H 4600 6050 50  0001 C CNN
+	1    4600 6050
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E64F40A
-P 10600 4150
-F 0 "#PWR?" H 10600 3900 50  0001 C CNN
-F 1 "GND" H 10600 4000 50  0000 C CNN
-F 2 "" H 10600 4150 50  0001 C CNN
-F 3 "" H 10600 4150 50  0001 C CNN
-	1    10600 4150
+P 4900 6050
+F 0 "#PWR?" H 4900 5800 50  0001 C CNN
+F 1 "GND" H 4900 5900 50  0000 C CNN
+F 2 "" H 4900 6050 50  0001 C CNN
+F 3 "" H 4900 6050 50  0001 C CNN
+	1    4900 6050
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9450 4150 9550 4150
+	4250 6050 4450 6050
 Wire Wire Line
-	9950 4150 10150 4150
-Wire Wire Line
-	10450 4150 10600 4150
-$Comp
-L power:+5V #PWR?
-U 1 1 5E656E7D
-P 9750 5100
-F 0 "#PWR?" H 9750 4950 50  0001 C CNN
-F 1 "+5V" H 9750 5240 50  0000 C CNN
-F 2 "" H 9750 5100 50  0001 C CNN
-F 3 "" H 9750 5100 50  0001 C CNN
-	1    9750 5100
-	-1   0    0    1   
-$EndComp
+	4750 6050 4900 6050
 $Comp
 L PC_driver-rescue:C C2
 U 1 1 5E65749E
-P 9750 4800
-F 0 "C2" H 9775 4900 50  0000 L CNN
-F 1 "100nF" H 9775 4700 50  0000 L CNN
-F 2 "Capacitors_THT:C_Rect_L13.0mm_W4.0mm_P10.00mm_FKS3_FKP3_MKS4" H 9788 4650 50  0001 C CNN
-F 3 "" H 9750 4800 50  0001 C CNN
-	1    9750 4800
+P 9100 5600
+F 0 "C2" H 9125 5700 50  0000 L CNN
+F 1 "100nF" H 9125 5500 50  0000 L CNN
+F 2 "Capacitors_THT:C_Rect_L13.0mm_W4.0mm_P10.00mm_FKS3_FKP3_MKS4" H 9138 5450 50  0001 C CNN
+F 3 "" H 9100 5600 50  0001 C CNN
+	1    9100 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E662838
-P 9750 4500
-F 0 "#PWR?" H 9750 4250 50  0001 C CNN
-F 1 "GND" H 9750 4350 50  0000 C CNN
-F 2 "" H 9750 4500 50  0001 C CNN
-F 3 "" H 9750 4500 50  0001 C CNN
-	1    9750 4500
-	-1   0    0    1   
+P 9100 5900
+F 0 "#PWR?" H 9100 5650 50  0001 C CNN
+F 1 "GND" H 9100 5750 50  0000 C CNN
+F 2 "" H 9100 5900 50  0001 C CNN
+F 3 "" H 9100 5900 50  0001 C CNN
+	1    9100 5900
+	1    0    0    -1  
 $EndComp
-Connection ~ 9550 4150
-Wire Wire Line
-	9550 4150 9650 4150
-Wire Wire Line
-	9450 4250 9550 4250
-Wire Wire Line
-	9550 4250 9550 4150
-Wire Wire Line
-	9750 4950 9750 5000
-Wire Wire Line
-	10250 1700 10400 1700
-Wire Wire Line
-	10400 1700 10400 2050
-Connection ~ 10400 2050
-Wire Wire Line
-	10400 2050 10200 2050
-Connection ~ 9550 4250
-Wire Wire Line
-	9550 5000 9750 5000
-Connection ~ 9750 5000
-Wire Wire Line
-	9750 5000 9750 5100
-Wire Wire Line
-	9750 4500 9750 4650
-Wire Wire Line
-	9550 4250 9550 5000
 $Comp
 L PC_driver-rescue:Conn_Coaxial J?
 U 1 1 5ED9B968
 P 9000 2450
 F 0 "J?" H 9010 2570 50  0000 C CNN
-F 1 "Conn_Coaxial" V 9115 2450 50  0000 C CNN
+F 1 "Analog_out (0to5V)" V 9115 2450 50  0000 C CNN
 F 2 "Connectors:BNC" H 9000 2450 50  0001 C CNN
 F 3 "" H 9000 2450 50  0001 C CNN
 	1    9000 2450
@@ -496,7 +325,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 2450 5000 2450
 Text GLabel 4600 2400 0    60   Input ~ 0
-S2
+signal_pre_blank
 Wire Wire Line
 	4600 2400 4750 2400
 Connection ~ 4750 2400
@@ -532,23 +361,8 @@ F 3 "" H 8600 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8600 2250 8600 2350
-Text GLabel 8650 3050 3    60   Input ~ 0
-D
-$Comp
-L PC_driver-rescue:R R?
-U 1 1 5EDFD512
-P 8650 2800
-F 0 "R?" V 8730 2800 50  0000 C CNN
-F 1 "60" V 8650 2800 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8580 2800 50  0001 C CNN
-F 3 "" H 8650 2800 50  0001 C CNN
-	1    8650 2800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8650 2650 8600 2650
-Wire Wire Line
-	8650 2950 8650 3050
 Wire Wire Line
 	8600 2450 8750 2450
 Wire Wire Line
@@ -558,4 +372,227 @@ Wire Wire Line
 Connection ~ 8750 2450
 Wire Wire Line
 	8750 2450 8850 2450
+$Comp
+L power:+5V #PWR?
+U 1 1 5ED543B0
+P 3850 6050
+F 0 "#PWR?" H 3850 5900 50  0001 C CNN
+F 1 "+5V" H 3850 6190 50  0000 C CNN
+F 2 "" H 3850 6050 50  0001 C CNN
+F 3 "" H 3850 6050 50  0001 C CNN
+	1    3850 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3850 6050 3950 6050
+$Comp
+L power:GND #PWR?
+U 1 1 5ED69F36
+P 2200 1200
+F 0 "#PWR?" H 2200 950 50  0001 C CNN
+F 1 "GND" H 2200 1050 50  0000 C CNN
+F 2 "" H 2200 1200 50  0001 C CNN
+F 3 "" H 2200 1200 50  0001 C CNN
+	1    2200 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L PC_driver-rescue:R R1
+U 1 1 5E14669F
+P 1600 950
+F 0 "R1" V 1680 950 50  0000 C CNN
+F 1 "100k" V 1600 950 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1530 950 50  0001 C CNN
+F 3 "" H 1600 950 50  0001 C CNN
+	1    1600 950 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2200 1150 2200 1200
+Wire Wire Line
+	1850 950  1850 1150
+Connection ~ 1850 950 
+Wire Wire Line
+	1850 950  2050 950 
+$Comp
+L PC_driver-rescue:Conn_Coaxial J?
+U 1 1 5ED79627
+P 9400 4700
+F 0 "J?" H 9410 4820 50  0000 C CNN
+F 1 "TTL_input (blanking)" V 9515 4700 50  0000 C CNN
+F 2 "Connectors:BNC" H 9400 4700 50  0001 C CNN
+F 3 "" H 9400 4700 50  0001 C CNN
+	1    9400 4700
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5ED83FE0
+P 9950 4700
+F 0 "#PWR?" H 9950 4450 50  0001 C CNN
+F 1 "GND" H 9950 4550 50  0000 C CNN
+F 2 "" H 9950 4700 50  0001 C CNN
+F 3 "" H 9950 4700 50  0001 C CNN
+	1    9950 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L PC_driver-rescue:R R?
+U 1 1 5ED97606
+P 9600 4450
+F 0 "R?" V 9680 4450 50  0000 C CNN
+F 1 "100k" V 9600 4450 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9530 4450 50  0001 C CNN
+F 3 "" H 9600 4450 50  0001 C CNN
+	1    9600 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Analog_Switch:ADG419BN U?
+U 2 1 5ED9C4D3
+P 8400 5350
+F 0 "U?" V 8083 5350 50  0000 C CNN
+F 1 "ADG419BN" V 8174 5350 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 8400 5050 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG419.pdf" H 8400 5150 50  0001 C CNN
+	2    8400 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E656E7D
+P 9300 5450
+F 0 "#PWR?" H 9300 5300 50  0001 C CNN
+F 1 "+5V" H 9300 5590 50  0000 C CNN
+F 2 "" H 9300 5450 50  0001 C CNN
+F 3 "" H 9300 5450 50  0001 C CNN
+	1    9300 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9300 5450 9100 5450
+Wire Wire Line
+	9100 5450 9000 5450
+Connection ~ 9100 5450
+Wire Wire Line
+	9100 5750 9100 5900
+Wire Wire Line
+	9000 5450 9000 5350
+Wire Wire Line
+	9000 5350 8900 5350
+Connection ~ 9000 5450
+Wire Wire Line
+	9000 5450 8900 5450
+$Comp
+L power:GND #PWR?
+U 1 1 5EDD9AEE
+P 7600 5400
+F 0 "#PWR?" H 7600 5150 50  0001 C CNN
+F 1 "GND" H 7600 5250 50  0000 C CNN
+F 2 "" H 7600 5400 50  0001 C CNN
+F 3 "" H 7600 5400 50  0001 C CNN
+	1    7600 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 5400 7700 5400
+Wire Wire Line
+	7700 5400 7700 5350
+Wire Wire Line
+	7700 5350 7900 5350
+Wire Wire Line
+	7900 5450 7700 5450
+Wire Wire Line
+	7700 5450 7700 5400
+Connection ~ 7700 5400
+Wire Wire Line
+	9400 4350 9400 4450
+Wire Wire Line
+	9450 4450 9400 4450
+Connection ~ 9400 4450
+Wire Wire Line
+	9400 4450 9400 4550
+Wire Wire Line
+	9600 4700 9750 4700
+Wire Wire Line
+	9750 4450 9750 4700
+Connection ~ 9750 4700
+Wire Wire Line
+	9750 4700 9950 4700
+Text GLabel 9900 4150 2    60   Input ~ 0
+signal_pre_blank
+Wire Wire Line
+	9900 4150 9700 4150
+Text GLabel 8800 4150 0    60   Input ~ 0
+signal_pos_blank
+Wire Wire Line
+	8800 4150 9100 4150
+$Comp
+L Analog_Switch:ADG419BN U?
+U 1 1 5EE1A9F3
+P 9400 3950
+F 0 "U?" H 9400 4192 50  0000 C CNN
+F 1 "ADG419BN" H 9400 4101 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 9400 3650 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG419.pdf" H 9400 3750 50  0001 C CNN
+	1    9400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 4150 9100 4050
+$Comp
+L power:GND #PWR?
+U 1 1 5EE2185F
+P 9800 3950
+F 0 "#PWR?" H 9800 3700 50  0001 C CNN
+F 1 "GND" H 9800 3800 50  0000 C CNN
+F 2 "" H 9800 3950 50  0001 C CNN
+F 3 "" H 9800 3950 50  0001 C CNN
+	1    9800 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9800 3950 9700 3950
+Text GLabel 8650 3100 3    60   Input ~ 0
+signal_pos_blank
+Wire Wire Line
+	8650 2650 8650 3100
+$Comp
+L Connector:USB_C_Plug_USB2.0 P?
+U 1 1 5EE3842F
+P 1650 3700
+F 0 "P?" H 1757 4567 50  0000 C CNN
+F 1 "USB_C_Plug_USB2.0" H 1757 4476 50  0000 C CNN
+F 2 "" H 1800 3700 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1800 3700 50  0001 C CNN
+	1    1650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EE3ABB2
+P 1650 4750
+F 0 "#PWR?" H 1650 4500 50  0001 C CNN
+F 1 "GND" H 1650 4600 50  0000 C CNN
+F 2 "" H 1650 4750 50  0001 C CNN
+F 3 "" H 1650 4750 50  0001 C CNN
+	1    1650 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4750 1650 4650
+Wire Wire Line
+	1650 4650 1350 4650
+Wire Wire Line
+	1350 4650 1350 4600
+Connection ~ 1650 4650
+Wire Wire Line
+	1650 4650 1650 4600
+NoConn ~ 2250 3600
+NoConn ~ 2250 3800
+NoConn ~ 2250 3300
+Wire Wire Line
+	7050 3250 4000 3250
+Wire Wire Line
+	7050 4750 7050 3250
 $EndSCHEMATC
