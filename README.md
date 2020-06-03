@@ -1,4 +1,4 @@
-# Pockel_cell_driver
+# Pockel cell driver
 An open source circuit to synchronise laser intensity with the recording system of a 2-Photon microscope, by controlling the signal that reaches the laser's Pockel Cell. 
 
 
