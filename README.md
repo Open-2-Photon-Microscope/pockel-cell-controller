@@ -1,5 +1,11 @@
 # Pockel_cell_driver
-An open source electronic circuit to drive Pockel cells.
+An open source circuit to synchronise laser intensity with the recording system of a 2-Photon microscope, by controlling the signal that reaches the laser's Pockel Cell. 
+
+
+The main purpose of this circuit is to condition an analog signal using an fast switch IC that opens and closes the analog line using a digital 0-5V square signal (0V circuit open, 5V circuit closed). The original switching signal is 1.6ms at 5V and 0.4ms at 0V (composing a 500Hz signal), but other signals can be used.
+
+This board can take an internal analog signal, where the signal amplitude (and therefore the laser intensity) is set by a potentiometer, or an external signal connected via a BNC cable.
+
 
 ## Credit:
 - The Pockels' cell driver was inspired by earlier devices designed and built by R. Berndt ([HIH Tübingen](<https://www.hih-tuebingen.de/en/>)), part of a project of [T. Euler's lab](<http://www.eye-tuebingen.de/eulerlab/>). See image below for original schematic
