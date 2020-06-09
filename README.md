@@ -1,6 +1,8 @@
 # Pockel cell driver
-An open source circuit to synchronise laser intensity with the recording system of a 2-Photon microscope, by controlling the signal that reaches the laser's Pockel Cell. 
 
+An open source circuit to modulate laser intensity in a 2 Photon microscope. This modulation is necessary when visual stimulation is used to elicit responses from biological tissue (photoreceptors). The laser power is tunned high and low periodically (in our systems at 500Hz using a square wavefom at 80% duty cycle). When laser power is low, visual stimulation is on, when laser power is high, visual stimulation is off. 
+
+This driver was built to control a laser modulator from Conoptics. Specifically [his model](https://www.lambdaphoto.co.uk/electro-optic-modulator-systems.html).
 
 The main purpose of this circuit is to condition an analog signal using an fast switch IC that opens and closes the analog line using a digital 0-5V square signal (0V circuit open, 5V circuit closed). The original switching signal is 1.6ms at 5V and 0.4ms at 0V (composing a 500Hz signal), but other signals can be used.
 
