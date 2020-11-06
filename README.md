@@ -1,4 +1,4 @@
-# Pockel cell driver
+# Pockel cell controller
 
 An open source circuit to modulate laser intensity in a 2 Photon microscope. This modulation is necessary when visual stimulation is used to elicit responses from biological tissue (photoreceptors). The laser power is tunned high and low periodically (in our systems at 500Hz using a square wavefom at 80% duty cycle). When laser power is low, visual stimulation is on, when laser power is high, visual stimulation is off. 
 
