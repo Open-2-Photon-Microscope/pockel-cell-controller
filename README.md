@@ -6,6 +6,13 @@ This driver was built to control a laser modulator from Conoptics. Specifically 
 
 The main purpose of this circuit is to condition an analog signal using an fast switch IC that opens and closes the analog line using a digital 0-5V square signal (0V circuit open, 5V circuit closed). The original switching signal is 1.6ms at 5V and 0.4ms at 0V (composing a 500Hz signal), but other signals can be used.
 
+
+
+![](/media/pockel_controller_signal.gif)
+
+
+
+
 This board can take an internal analog signal, where the signal amplitude (and therefore the laser intensity) is set by a potentiometer, or an external signal connected via a BNC cable.
  
 The Pockels' cell driver was inspired by earlier devices designed and built by R. Berndt ([HIH Tübingen](<https://www.hih-tuebingen.de/en/>)), part of a project of [T. Euler's lab](<http://www.eye-tuebingen.de/eulerlab/>).
